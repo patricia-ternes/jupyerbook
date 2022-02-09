@@ -1,16 +1,19 @@
-# First change
-
-This is a small sample book to give you a feel for how book content is
-structured.
+# Software development - good practices and tips
 
 :::{note}
-Here is a note!
+RSE training sessions for first year CDT Fluid Dynamics students
 :::
 
-And here is a code block:
+## Introduction
 
-```
-e = mc^2
-```
+## Pre-requisites
 
-Check out the content pages bundled with this sample book to see more.
+## Instructors
+
+* Principal Instructor: [Dr Patricia Ternes](https://patricia-ternes.github.io/)
+* Assistant Instructors: [Research Computing Team](https://arc.leeds.ac.uk/about/team/)
+
+## Content
+
+```{tableofcontents}
+```
