@@ -1,0 +1,57 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Learning to develop software tools
+  chapters:
+  - file: part1/overview
+    sections:
+    - file: part1/project
+    - file: part1/project-lifecycles
+    - file: part1/agile
+    - file: part1/tasks
+    - file: part1/structure
+    - file: part1/data
+    - file: part1/management-plans
+    - file: part1/environment
+    - file: part1/vsc
+
+- caption: Getting to grips with version control
+  chapters:
+  - file: part2/overview1
+    sections:
+    - file: part2/vc-environment
+    - file: part2/vc
+    - file: part2/git
+    - file: part2/vc-local
+    - file: part2/mistakes
+
+  - file: part2/overview2
+    sections:
+    - file: part2/forks-branches
+    - file: part2/merge
+    - file: part2/github
+    
+- caption: Getting better at Python
+  chapters:
+  - file: part3/overview1
+    sections:
+    - file: part3/testing
+    - file: part3/assertions
+    - file: part3/exceptions
+    - file: part3/unit-tests
+    - file: part3/pytest
+    - file: part3/edge-corner
+    - file: part3/integration-regression
+    - file: part3/continuous-integration
+
+  - file: part3/overview2
+    sections:
+    - file: part3/tdd
+    - file: part3/fixtures
+
+  - file: part3/overview3
+    sections:
+    - file: part3/study-case
