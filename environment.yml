@@ -1,9 +1,0 @@
-name: arctraining-jb
-channels:
-  - defaults
-dependencies:
-  - python=3.8
-  - pip=20
-  - pip:
-    - jupyter-book
-    
