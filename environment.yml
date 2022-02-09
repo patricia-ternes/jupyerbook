@@ -5,4 +5,4 @@ dependencies:
   - python=3.7.6
   - pip=20
   - pip:
-    - jupyter-book==0.9.1
+    - jupyter-book==0.11
