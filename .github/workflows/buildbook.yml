@@ -1,5 +1,3 @@
-# copied from https://jupyterbook.org/publish/gh-pages.html?highlight=github%20pages
-
 name: deploy-book
 
 # Only run this when the master branch changes
@@ -7,30 +5,39 @@ on:
   push:
     branches:
     - main
+    # If your git repository has the Jupyter Book within some-subfolder next to
+    # unrelated files, you can make this run only if a file within that specific
+    # folder has been modified.
+    #
+    # paths:
+    # - some-subfolder/**
 
-# This job installs dependencies, build the book, and pushes it to `gh-pages`
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: goanpeca/setup-miniconda@v1
+
+    # Install dependencies
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v1
       with:
-        environment-file: environment.yml
-        python-version: 3.8
-        auto-activate-base: false
-        activate-environment: arctraining-jb
+        python-version: 3.7
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
 
     # Build the book
     - name: Build the book
-      shell: bash -l {0}
       run: |
-        conda activate arctraining-jb
-        jupyter-book build ./book/
-    # Push the book's HTML to master branch (because this is an organisation homepage)
+        jupyter-book build .
+
+    # Push the book's HTML to github-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./book/_build/html
-        publish_branch: gh-pages
+        publish_dir: ./_build/html
+        
