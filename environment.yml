@@ -1,4 +1,4 @@
-name: training-jb
+name: arctraining-jb
 channels:
   - defaults
 dependencies:
